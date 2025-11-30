@@ -8601,3 +8601,30 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+/* agadjg specific */
+
+	.agadjg-module-spacing {
+		padding: 3rem;
+	}
+
+	.agadjg-module-01 {
+		background-image: url(/images/banner.jpg);
+		background-size: cover;
+	}
+
+	.image .img-100 {
+		width: 100%;
+		height: auto;
+	}
+
+	.image .img-50 {
+		width: 50%;
+		height: auto;
+	}
+
+	.agadjg-align-right {
+		text-align: right;
+		justify-content: flex-end;
+		display: flex;
+	}
