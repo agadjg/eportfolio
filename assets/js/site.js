@@ -1,7 +1,7 @@
 (function () {
-  var MAX_CARD_CHARACTERS = 315;
+  var MAX_CARD_CHARACTERS = 350;
   var yearNodes = document.querySelectorAll("[data-year]");
-  var cardDescriptionNodes = document.querySelectorAll(".card p");
+  var cardDescriptionNodes = document.querySelectorAll(".card.short p");
   var year = new Date().getFullYear();
 
   yearNodes.forEach(function (node) {
