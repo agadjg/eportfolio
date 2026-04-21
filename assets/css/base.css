@@ -167,10 +167,6 @@ a {
 }
 
 @media (max-width: 420px) {
-  /* hide the subtitle on very small screens to keep the header clean */
-  .brand-subtitle {
-    display: none;
-  }
   .brand {
     font-size: 0.98rem;
   }
