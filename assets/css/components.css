@@ -241,6 +241,11 @@
   color: #000000; /* dark text for contrast on amber */
 }
 
+.btn-short-script {
+  background-color: #d582d1; /* amber */
+  color: #000000; /* dark text for contrast on amber */
+}
+
 /* Keep hover behaviour consistent across variants */
 .md-btn.btn-key-project:hover,
 .md-btn.btn-reflection:hover,
