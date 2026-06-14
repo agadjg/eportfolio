@@ -1,20 +1,19 @@
 # ==================================================
 # COVID ANALYSIS: Activity 1 (Unit 1 /Seminar 1)
 # ==================================================
-
-# 1. Clear workspace
-rm(list = ls())
-# --------------------------------------------------
+# 1. Install packages
 
 # 2. Load packages
 # --------------------------------------------------
 library(psych)
 library(vioplot)
 library(skimr)
+library(DescTools)
 # --------------------------------------------------
 
 # 3. Import CSV
 covid <- read.csv("data/covid_india.csv")
+
 # --------------------------------------------------
 
 # 4. Inspect data structure
@@ -24,7 +23,7 @@ summary(covid)
 names(covid)
 # --------------------------------------------------
 
-# 5. Remove 'Sno' ID
+# 5. Remove'Sno' ID
 head(covid$Sno)
 covid$Sno <- NULL
 ncol(covid)
@@ -93,29 +92,28 @@ pie(table(recovery_status))
 # COVID ANALYSIS: Activity 2 (Unit 2/Seminar 2)
 # ==================================================
 
-# 1. Central tendency of ConfirmedIndianNational
+# 1. Central tendency
 # --------------------------------------------------
 mean(covid$ConfirmedIndianNational)
 median(covid$ConfirmedIndianNational)
+Mode(covid$ConfirmedIndianNational)
 names(sort(table(covid$ConfirmedIndianNational), decreasing = TRUE))[1]
 # --------------------------------------------------
-
-# 9. Dispersion of ConfirmedIndianNational
+# 9. Dispersion
 # --------------------------------------------------
 sd(covid$ConfirmedIndianNational)
 var(covid$ConfirmedIndianNational)
 range(covid$ConfirmedIndianNational)
 # --------------------------------------------------
-
-# 10. Visualisations of 4 variables
+# 10. Visualizations
 # --------------------------------------------------
 hist(covid$ConfirmedIndianNational)
 hist(covid$ConfirmedIndianNational, probability = TRUE) 
 lines(density(covid$ConfirmedIndianNational),  col = "blue")
 boxplot(covid$ConfirmedIndianNational)
 vioplot(covid$ConfirmedIndianNational)
-# --------------------------------------------------
 
+# --------------------------------------------------
 hist(covid$ConfirmedForeignNational)
 hist(covid$ConfirmedForeignNational, probability = TRUE) 
 lines(density(covid$ConfirmedForeignNational),  col = "orange")
@@ -154,12 +152,12 @@ table(death_factor)
 frequency2 <- table(death_factor)
 frequency2/sum(frequency2)*100
 round(frequency2/sum(frequency2)*100,1)
-# --------------------------------------------------
 
 # 4. Visualisation
 barplot(table(death_factor))
 pie(table(death_factor))
 # --------------------------------------------------
+
 
 # 5. Categorical Variable for confirmed cases (Indian + Foreign nationals)
 total_cases <- covid$ConfirmedIndianNational + covid$ConfirmedForeignNational
@@ -170,10 +168,11 @@ case_level <- ifelse(total_cases == 0, "No Cases",
 
 # 6. Frequency table for the most frequent reporting 
 table(case_level)
+
 case_level <- factor(case_level, levels = c("No Cases", "Low Cases", "Medium Cases", "High Cases"))
 table(case_level)
-# --------------------------------------------------
 
+# --------------------------------------------------
 # 7. Frequency table for State/Union Territory for the most frequent reporting
 table(covid$State.UnionTerritory)
 table(covid$State.UnionTerritory, case_level)
@@ -186,6 +185,73 @@ head(sort(table(covid$State.UnionTerritory), decreasing = TRUE), 10)
 state_case_table <- table(covid$State.UnionTerritory, case_level)
 top_10_frequency_table <- state_case_table[order(rowSums(state_case_table), decreasing = TRUE)[1:10],, drop = FALSE]
 addmargins(top_10_frequency_table)
+
 # --------------------------------------------------
+# ==================================================
+# COVID ANALYSIS: Activity 4 (Unit 5)
+# ==================================================
 
+# 9. Barchart with frequency of COVID-19 reports by state/union territory.
+View(covid_india_clean)
 
+library(tidyverse)
+
+covid_india_clean %>%
+  count(State.UnionTerritory) %>%
+  ggplot(aes(x = reorder(State.UnionTerritory, n), y = n))+
+  geom_col()+
+  coord_flip()+
+  
+  theme_bw()+
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        legend.text = element_text(size = 12),
+        plot.title = element_text(face = "bold"))+
+  
+  labs(title = "Frequency of COVID-19 Reports by State/Union Territory",
+       x = "State/Union Territory", 
+       y = "Number of Reports")
+
+# --------------------------------------------------
+# 10. Pie chart showing the distribution of case severity levels based on total confirmed cases
+# Using variables ConfirmedIndianNational and ConfirmedForeignNational.
+
+total_cases <- covid_india_clean$ConfirmedIndianNational + covid_india_clean$ConfirmedForeignNational
+case_level <- ifelse(total_cases == 0, "No Cases", 
+                     ifelse(total_cases <= 5, "Low Cases", 
+                            ifelse(total_cases <= 15, "Medium Cases", "High Cases")))
+table(case_level)
+
+slices <- c(32, 177, 61)
+severity_levels <- c("High Cases (32)", "Low Cases (177)", "Medium Cases (61)")
+pie(slices, labels = severity_levels, main="Pie Chart of Distribution of COVID-19 Case Severity Levels")
+
+# --------------------------------------------------
+# 11. Histogram with the distribution of recovery numbers
+
+hist(covid_india_clean$Cured,
+     main="Distribution of Recovery Numbers of COVID-19",
+     xlab="Cured cases",
+     col="orange")
+
+# --------------------------------------------------
+# 12. Line chart showing the trend of total cases over time
+
+covid_india_clean$total_cases <- 
+  covid_india_clean$ConfirmedIndianNational + covid_india_clean$ConfirmedForeignNational
+
+View(covid_india_clean)
+
+#Aggregate the total cases per Date
+covid_daily_total <- aggregate(total_cases ~ Date, data = covid_india_clean,
+  FUN = sum)
+
+plot(covid_daily_total$Date, covid_daily_total$total_cases,
+  type = "l",
+  xlab = "Date",
+  ylab = "Total Cases",
+  main = "Trend of Total COVID-19 Cases Over Time")
+
+# --------------------------------------------------
