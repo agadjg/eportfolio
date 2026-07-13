@@ -1,13 +1,9 @@
 ## =============================================================================
 # HR Training Vendors Statistical Analysis
 ## =============================================================================
-#Load packages 
-library(haven)
-library(tidyr)
-library(DescTools)
-
 #Load data
-HR_vendor_scores <- read_csv("~/vendor_scores.csv")
+library(readr)
+vendor_scores <- read.csv("vendor_scores.csv")
 
 ## =============================================================================
 #Data Exploration (Central Tendency and Dispersion)
@@ -30,7 +26,8 @@ IQR(vendor_scores$Vendor_3)
 ## =============================================================================
 #Data Visualisation
 ## =============================================================================
-boxplot(vendor_scores)
+boxplot(vendor_scores,
+        main = "Distribution of Vendors scores")
 
 ## =============================================================================
 # Normality Testing
@@ -57,6 +54,15 @@ vendor_scores_long <- pivot_longer(
 vendor_scores_long
 
 #ANOVA Test
-aov(score ~ vendor,don data = Health_Data)
-summary(aov(sbp ~ occupation, data = Health_Data))
+aov(Score ~ Vendors, data = vendor_scores_long)
+summary(aov(Score ~ Vendors, data = vendor_scores_long))
+
+## =============================================================================
+## ## Post-Hoc Comparison - TukeyHSD
+## =============================================================================
+
+aggregate(Score ~ Vendors, data = vendor_scores_long, mean)
+TukeyHSD(aov(Score ~ Vendors, data = vendor_scores_long))
+
+
 

@@ -12,7 +12,7 @@ library(DescTools)
 # --------------------------------------------------
 
 # 3. Import CSV
-covid <- read.csv("data/covid_india.csv")
+covid <- read.csv("covid_india.csv")
 
 # --------------------------------------------------
 
@@ -254,4 +254,89 @@ plot(covid_daily_total$Date, covid_daily_total$total_cases,
   ylab = "Total Cases",
   main = "Trend of Total COVID-19 Cases Over Time")
 
-# --------------------------------------------------
+# ==============================================================================
+# COVID ANALYSIS: Activity 7 (Unit 9)
+# ==============================================================================
+#Importing data
+library(readr)
+library(tidyverse)
+
+# Import CSV
+covid_india_clean <- read.csv("covid_india_clean.csv")
+
+
+## -----------------------------------------------------------------------------
+## Relationship between Region and Case Severity Level (Cross tabulation)
+## -----------------------------------------------------------------------------
+
+##Inspect variables and convert to categorical factor variables
+
+## 1. State/UnionTerritory (grouped into regions)
+str(covid_india_clean$State.UnionTerritory)
+covid_india_clean$State.UnionTerritory <- as.factor(covid_india_clean$State.UnionTerritory)
+table(covid_india_clean$State.UnionTerritory)
+
+##2. ConfirmedIndianNational + ConfirmedForeignNational (grouped into case levels)
+
+# Categorical Variable for confirmed cases (Indian + Foreign nationals)
+total_cases <- covid_india_clean$ConfirmedIndianNational + covid_india_clean$ConfirmedForeignNational
+covid_india_clean$case_level <- ifelse(total_cases == 0, "No Cases", 
+                     ifelse(total_cases <= 5, "Low Cases", 
+                            ifelse(total_cases <= 15, "Medium Cases", "High Cases")))
+
+# Adding 'case_level' variable and converting into factor variable                 
+covid_india_clean$case_level <- factor(covid_india_clean$case_level, levels = c("No Cases", "Low Cases", "Medium Cases", "High Cases"))
+
+# Frequency table for Case level
+table(covid_india_clean$case_level)
+
+# Visualise the relationship among Case levels and Regions 
+# Contingency table for Case Severity levels
+
+case_level <- table(covid_india_clean[, c('State.UnionTerritory', 'case_level')], dnn = c('State.UnionTerritory', 'case_level')) # dnn adds the variable names
+case_level <- addmargins(case_level) # addmargins adds the row and column totals
+case_level
+
+# Calculating the Diabetes outcome percentages by Age Group
+case_level_pct_tb <- round(prop.table(case_level, margin = 2) * 100, 1)
+
+# Chi-square test (Case Severity Leve;s)
+chisq.test(case_level)
+chisq.test(case_level)$expected
+
+## -----------------------------------------------------------------------------
+## Relationship between Case Severity Level and Recovery status (Cross tabulation)
+## -----------------------------------------------------------------------------
+
+##Inspect variables and convert to categorical factor variables
+
+##1. ConfirmedIndianNational + ConfirmedForeignNational (grouped into case levels)
+str(covid_india_clean$case_level)
+
+##2. Cured (grouped into recovery status)
+
+# Adding categorical Variable for Recovery status
+covid_india_clean$recovery_status <- ifelse(
+  covid_india_clean$Cured > 0, "Recovered", "No Recovered")
+
+# Converting 'Recovery status' into factor variable      
+covid_india_clean$recovery_status <- factor(
+  covid_india_clean$recovery_status, levels = c("Recovered", "No Recovered"))
+
+# Frequency table for Case level
+table(covid_india_clean$recovery_status)
+
+# Visualise the relationship among Case Severity Level and Recovery Status.
+# Contingency table - How recovery status varies across severity levels.
+recovery_status <- table(covid_india_clean[, c('case_level', 'recovery_status')], 
+                         dnn = c('Srecovery_status', 'case_level')) # dnn adds the variable names
+recovery_status <- addmargins(recovery_status) # addmargins adds the row and column totals
+recovery_status
+
+recovery_status_pct_tb <- round(prop.table(recovery_status, margin = 1)* 100, 1)
+recovery_status_pct_tb
+
+#recovery_status <- table(covid_india_clean$case_level,covid_india_clean$recovery_status)
+
+
+
