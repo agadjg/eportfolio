@@ -844,9 +844,10 @@ sd(diabetes$Glucose, na.rm = TRUE)
 IQR(diabetes$Glucose, na.rm = TRUE)
 
 #-------------------------------------------------------------------------------
-#Visualisation (Additional investigation)
+# Visualisation (Additional investigation)
 # Relationships between Glucose ~ Age + BMI, Pregnancies + BloodPressure + 
 # + SkinThickness + Insulin + DiabetesPedigreeFunction)
+#-------------------------------------------------------------------------------
 
 # Scatterplotes (Glucose ~ Age)
 p1 <- ggplot(diabetes, aes(x = Age, y = Glucose)) +
