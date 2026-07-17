@@ -774,7 +774,7 @@ fisher.test(table(diabetes[, c('BMIGroup', 'Outcome')]))
 
 #Correlation matrix (Heatmap)
 library(GGally)
-corr_diabetes <- diabetes[, c("Pregnancies", "Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI", "DiabetesPedigreeFunction", "Age")]
+corr_diabetes <- diabetes[, c("Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI", "DiabetesPedigreeFunction", "Age")]
 
 ggcorr(corr_diabetes,
        label = TRUE, label_round = 2, label_size = 3, hjust = 0.9, layout.exp = 2,
