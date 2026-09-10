@@ -20,56 +20,67 @@
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   line-height: 1.2;
-  display: flex; /* keep icon, title and optional status on one row */
+  display: flex;
+  /* keep icon, title and optional status on one row */
   align-items: center;
   gap: 0.5rem;
 }
 
 .panel p {
-  margin: 0 0 var(--md-sys-spacing-4); /* add bottom gap between paragraphs for better rhythm */
+  margin: 0 0 var(--md-sys-spacing-4);
+  /* add bottom gap between paragraphs for better rhythm */
   color: var(--md-sys-color-on-surface-variant);
 }
 
 /* Profile grid: thumbnail column + content column */
 .profile-grid {
   display: grid;
-  grid-template-columns: 180px 1fr; /* fixed thumbnail column, flexible content column */
+  grid-template-columns: 180px 1fr;
+  /* fixed thumbnail column, flexible content column */
   gap: var(--md-sys-spacing-4);
   align-items: start;
 }
 
 .profile-thumb {
-  width: 180px; /* thumbnail width */
-  padding: 8px; /* interior padding to frame the image */
-  border-radius: 16px; /* tile corner radius */
+  width: 180px;
+  /* thumbnail width */
+  padding: 8px;
+  /* interior padding to frame the image */
+  border-radius: 16px;
+  /* tile corner radius */
   background: var(--md-sys-color-surface-container-high);
   border: 1px solid var(--md-sys-color-outline-variant);
   box-shadow: var(--md-sys-elevation-1);
-  margin: 0; /* grid handles spacing */
+  margin: 0;
+  /* grid handles spacing */
   box-sizing: border-box;
   display: block;
 }
 
 .profile-body {
-  min-width: 0; /* allow content to truncate properly inside grid */
+  min-width: 0;
+  /* allow content to truncate properly inside grid */
 }
 
 .profile-image {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 16px; /* match the tile radius so corners are flush */
+  border-radius: 16px;
+  /* match the tile radius so corners are flush */
   object-fit: cover;
 }
 
 /* On smaller screens stack the thumbnail above the content */
 @media (max-width: 720px) {
   .profile-grid {
-    grid-template-columns: 1fr; /* stack into a single column */
+    grid-template-columns: 1fr;
+    /* stack into a single column */
   }
 
   .profile-thumb {
-    width: 160px; /* smaller thumbnail on narrow screens */
+    width: 160px;
+    /* smaller thumbnail on narrow screens */
     margin: 0 auto var(--md-sys-spacing-4);
   }
 }
@@ -122,7 +133,8 @@
   margin: 0 0 var(--md-sys-spacing-3);
   font-family: var(--font-display);
   font-size: 1.1rem;
-  display: flex; /* keep title and status on one row */
+  display: flex;
+  /* keep title and status on one row */
   align-items: center;
   gap: 0.5rem;
 }
@@ -131,24 +143,30 @@
 .module-label {
   display: inline-flex;
   align-items: center;
-  gap: 6px; /* subtle spacing between icon and text */
+  gap: 6px;
+  /* subtle spacing between icon and text */
 }
 
 .module-icon {
-  font-size: 25px; /* increased to 25px as requested */
+  font-size: 25px;
+  /* increased to 25px as requested */
   margin-right: 6px;
   vertical-align: middle;
-  color: inherit; /* match the surrounding text colour */
-  line-height: 1; /* ensure vertical centering with text */
+  color: inherit;
+  /* match the surrounding text colour */
+  line-height: 1;
+  /* ensure vertical centering with text */
 }
 
 /* Small status label for module tiles (subtle, secondary element) */
 .module-status {
   font-size: 12px;
-  margin-left: auto; /* push to the right in the flex row */
+  margin-left: auto;
+  /* push to the right in the flex row */
   padding: 2px 8px;
   border-radius: 12px;
-  background-color: rgba(126, 87, 194, 0.12); /* subtle purple tint (default = In Progress) */
+  background-color: rgba(126, 87, 194, 0.12);
+  /* subtle purple tint (default = In Progress) */
   color: #B39DDB;
   vertical-align: middle;
   display: inline-flex;
@@ -159,7 +177,8 @@
 /* Modifier for 'Coming' status: subtle gray */
 .module-status--coming {
   background-color: rgba(158, 158, 158, 0.08);
-  color: #9E9E9E; /* requested gray */
+  color: #9E9E9E;
+  /* requested gray */
 }
 
 /* Optional explicit modifier for 'In Progress' (keeps original purple tint) */
@@ -179,6 +198,7 @@
 }
 
 .md-btn {
+  margin-bottom: 3px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -208,16 +228,19 @@
   align-items: center;
   margin-right: 5px;
 }
+
 .md-btn .linkedin-icon svg {
   width: 16px;
   height: 16px;
   display: block;
-  fill: currentColor; /* inherit button text colour (white) */
+  fill: currentColor;
+  /* inherit button text colour (white) */
 }
 
 /* Material Symbol variant for LinkedIn icon inside md-btn */
 .md-btn .linkedin-icon.material-symbols-outlined {
-  font-size: 16px; /* match SVG size */
+  font-size: 16px;
+  /* match SVG size */
   line-height: 1;
   display: inline-flex;
   align-items: center;
@@ -225,25 +248,42 @@
 
 /* Button variants for content types (Material-inspired colours) */
 .btn-key-project {
-  background-color: #7E57C2; /* purple */
+  background-color: #7E57C2;
+  /* purple */
   color: #ffffff;
 }
+
 .btn-reflection {
-  background-color: #26A69A; /* teal */
+  background-color: #26A69A;
+  /* teal */
   color: #ffffff;
 }
+
 .btn-case-study {
-  background-color: #42A5F5; /* blue */
+  background-color: #42A5F5;
+  /* blue */
   color: #ffffff;
 }
+
 .btn-short-analysis {
-  background-color: #FFB300; /* amber */
-  color: #000000; /* dark text for contrast on amber */
+  background-color: #FFB300;
+  /* amber */
+  color: #000000;
+  /* dark text for contrast on amber */
 }
 
 .btn-short-script {
-  background-color: #d582d1; /* amber */
-  color: #000000; /* dark text for contrast on amber */
+  background-color: #d582d1;
+  /* amber */
+  color: #000000;
+  /* dark text for contrast on amber */
+}
+
+.btn-notebook {
+  background-color: #4ae1f8;
+  /* amber */
+  color: #000000;
+  /* dark text for contrast on amber */
 }
 
 /* Keep hover behaviour consistent across variants */
@@ -256,19 +296,24 @@
 
 /* Accessible focus styles: subtle box-shadow glow matching each variant's colour */
 .md-btn:focus-visible {
-  outline: none; /* remove default outline, we provide a coloured ring */
+  outline: none;
+  /* remove default outline, we provide a coloured ring */
 }
+
 .md-btn.btn-key-project:focus-visible {
-  box-shadow: 0 0 0 4px rgba(126,87,194,0.16);
+  box-shadow: 0 0 0 4px rgba(126, 87, 194, 0.16);
 }
+
 .md-btn.btn-reflection:focus-visible {
-  box-shadow: 0 0 0 4px rgba(38,166,154,0.16);
+  box-shadow: 0 0 0 4px rgba(38, 166, 154, 0.16);
 }
+
 .md-btn.btn-case-study:focus-visible {
-  box-shadow: 0 0 0 4px rgba(66,165,245,0.16);
+  box-shadow: 0 0 0 4px rgba(66, 165, 245, 0.16);
 }
+
 .md-btn.btn-short-analysis:focus-visible {
-  box-shadow: 0 0 0 4px rgba(255,179,0,0.18);
+  box-shadow: 0 0 0 4px rgba(255, 179, 0, 0.18);
 }
 
 .page-heading {
@@ -283,15 +328,18 @@
 /* Reduce module icon size on very small screens for better balance */
 @media (max-width: 420px) {
   .module-icon {
-    font-size: 18px; /* slightly smaller on narrow viewports */
+    font-size: 18px;
+    /* slightly smaller on narrow viewports */
   }
 }
 
 /* Tighten H1 line-height on very small screens for improved vertical alignment with icons */
 @media (max-width: 420px) {
+
   .panel h1,
   .section-title {
-    line-height: 1.05; /* reduce spacing so icon and text sit closer together */
+    line-height: 1.05;
+    /* reduce spacing so icon and text sit closer together */
   }
 }
 
