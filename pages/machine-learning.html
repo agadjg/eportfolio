@@ -82,12 +82,12 @@
         <article class="card">
           <h3>Exploratory Data Analysis (EDA) </h3>
           <p>In the realm of big data, where vast volumes and complex structures can obscure meaningful patterns and
-            introduce data quality issues, Exploratory Data Analysis becomes essential. It helps analysts understand their datasets, assess
-            data quality, uncover hidden patterns, identify anomalies, and formulate hypotheses. EDA is not a checklist
-            but an iterative process in which initial observations determine what to investigate further. It helps
-            develop key questions and assumptions to discuss with stakeholders before moving to feature selection and
-            machine learning, supporting informed business decisions.
-          </p>
+            introduce data quality issues, EDA becomes essential. It helps EDA enables analysts to understand datasets,
+            evaluate data quality, discover hidden patterns, identify anomalies, and generate hypotheses. EDA is not a
+            checklist but an iterative and progressive process. Each finding informs the next step and direction of
+            analysis. New observations continually guide what to investigate next. Additionally, EDA supports the
+            development of key questions for stakeholder discussions and helps challenge assumptions before advancing to
+            feature selection and machine learning, ultimately supporting more informed business decisions.</p>
           <div class="card-footer">
             <a class="md-btn btn-notebook" href="../assets/notebooks/auto_mpg.ipynb" target="_blank">
               <span>Auto-MPG EDA</span>
@@ -101,42 +101,46 @@
         </article>
 
         <article class="card">
-          <h3> From Correlation to Linear Regression Models - Assignment 2</h3>
-          <p>The exercises cover data exploration, preparation, correlation as well as simple linear, multiple linear,
-            and polynomial
-            regression tested across different datasets.</p>
+          <h3> From Correlation to Regression Models</h3>
+          <p>Exploratory data analysis (EDA) is closely linked to predictive modelling. Identifying and modelling
+            relationships between variables helps inform model selection. Correlation measures the strength and
+            direction of associations but does not indicate causation. A strong statistical relationship alone cannot
+            prove that changes in one variable cause changes in another. This distinction is crucial during EDA, where
+            correlation can reveal potential predictors, redundant variables, and multicollinearity, yet these findings
+            must always be interpreted within the problem’s context. Linear, multiple linear, and polynomial regression
+            model these relationships, generate predictions, and assess how well the models represent the underlying
+            data.</p>
           <div class="card-footer">
-            <a class="md-btn btn-short-script" href="../assets/scripts/Correlation.ipynb" download>
-              <span>Script</span>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/Correlation.ipynb" target="_blank">
+              <span>Exploring Correlation</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
-            <a class="md-btn btn-short-script" href="../assets/scripts/linear_regression.ipynb" target="_blank">
-              <span>Script</span>
-              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
-            </a>
-            <a class="md-btn btn-short-script" href="../assets/scripts/Multiple_Regression.ipynb" target="_blank">
-              <span>Script</span>
-              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
-            </a>
-            <a class="md-btn btn-short-script" href="../assets/scripts/Polynomial_Regression.ipynb" target="_blank">
-              <span>Script</span>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/correlation_regression_fuel_consumption.ipynb"
+              target="_blank">
+              <span>Fuel Consumption Analysis</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
           </div>
         </article>
 
         <article class="card">
-          <h3> Linear Regression - Assignment 3</h3>
-          <p> The exercise covers data exploration, preprocessing and linear regression to predict whether mean
-            population can linearly predict mean GDP across countries.</p>
+          <h3> Supervised Learning: Linear Regression</h3>
+          <p>Understanding the progression from exploring relationships to modelling is essential. EDA identifies
+            potential relationships, correlation quantifies their strength and direction, whereas linear regression
+            extends this by modelling relationships between predictors and the target variable. As a supervised learning
+            technique, linear regression fits a line that minimises the sum of squared residuals between actual and
+            predicted values for a continuous target. However, model evaluation and residual analysis demonstrate that
+            performance metrics alone do not provide a complete picture. Examining residuals helps determine whether
+            prediction errors are randomly distributed or if the model has missed underlying patterns.
+            Applying this to both Population–GDP and vehicle data helped connect the statistical
+            concepts with practical model fitting, prediction and evaluation.</p>
           <div class="card-footer">
-            <a class="md-btn btn-short-script" href="../assets/scripts/Assignment3_population_gdp.ipynb"
-              target="_blank">
-              <span>Script</span>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/population_gdp.ipynb" target="_blank">
+              <span>Population-GDP Analysis</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
             <a class="md-btn btn-notebook" href="../assets/notebooks/vehicles_geron.ipynb" target="_blank">
-              <span>Vehicles_Analysis</span>
+              <span>Vehicles Analysis</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
           </div>
