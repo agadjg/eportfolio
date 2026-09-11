@@ -147,27 +147,43 @@
         </article>
 
         <article class="card">
-          <h3> Jaccard Dissimilarity - Assignment 4</h3>
-          <p> The exercise covers similarity and dissimilarity measures for clustering, using the Jaccard coefficient to
-            compare individuals based on the presence or absence of health conditions. Jaccard is suitable for
-            asymmetric binary attributes (0/1), where the presence of a condition is more informative than its absence.
-            .</p>
+          <h3> Clustering and Similarity Measures</h3>
+          <p> Clustering is an unsupervised machine learning technique where data is not annotated or labelled with a
+            class. This approach is used in various domains, such as marketing for customer grouping and medicine for
+            patient segmentation. Observations are grouped based on similarity or distance without predefined labels.
+            However, the definition of similarity, the data's characteristics, and the expected group structure all
+            influence which clustering method is suitable. Different measures capture different notions of similarity,
+            including Euclidean distance, SMC, Jaccard, Cosine, and Pearson. The data type is crucial when
+            selecting a measure. For example, Jaccard works well for asymmetric binary attributes (0/1) where shared
+            presence carries more information than shared absence. Therefore, there is no universal distance measure or
+            clustering method that fits every dataset.
+          </p>
           <div class="card-footer">
-            <a class="md-btn" href="../assets/pdf/Jaccard_Distance_ Dissimilarity_Calculations.pdf">
-              <span>Short Analysis</span>
+            <a class="md-btn btn-short-analysis" href="../assets/pdf/Jaccard_Distance_ Dissimilarity_Calculations.pdf">
+              <span>Jaccard Dissimilarity Analysis</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/clustering_geron.ipynb" target="_blank">
+              <span>Various Clustering Analysis</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
           </div>
         </article>
 
         <article class="card">
-          <h3> K-Means Clustering - Assignment 5</h3>
-          <p> The exercise covers data exploration and standardisation before applying K-Means, an unsupervised
-            distance-based clustering technique, to identify wine segments based on similarities in their chemical
-            attributes. The algorithm groups wines with similar characteristics into distinct clusters.</p>
+          <h3> Unsupervised Learning - K-Means Clustering</h3>
+          <p> K-Means is a simple and computationally efficient clustering technique that excels with numerical data,
+            though categorical features require proper encoding. It performs best with compact, spherical clusters but
+            may struggle with irregular shapes, varying feature scales, and outliers. K-Means requires specifying the
+            number of clusters (k) in advance. The Elbow Method and Silhouette Score privide guidance but not definitive
+            answers. Therefore, evaluation should extend beyond model fitting. The analytical judgment
+            involves preparing features, selecting and validating k, evaluating the resulting clusters, and determining
+            whether the segmentation has domain-specific meaning. Applying K-Means to the Wine dataset made this process
+            practical, from exploring and standardising chemical attributes to selecting k, profiling the resulting
+            clusters, and comparing the discovered structure with known wine categories.</p>
           <div class="card-footer">
-            <a class="md-btn btn-short-script" href="../assets/scripts/Assignment5_Wine_Kmeans.ipynb" target="_blank">
-              <span>Script</span>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/Wine_Kmeans.ipynb" target="_blank">
+              <span>Wine Clustering Analysis</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
           </div>
