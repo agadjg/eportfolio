@@ -201,17 +201,17 @@
 
         <article class="card">
           <h3> Artificial Neural Networks: From Simple to Multilayer Perceptor</h3>
-          <p> Artificial Neural Networks (ANNs) mimic how the brain’s neurons process signals, adjust weights, and learn
-            to make predictions. I explored fundamental concepts from perceptrons to multilayer networks, including
-            activation functions, error calculation, weight updates, and backpropagation. Exercises demonstrated how
-            hidden layers allow ANNs to learn complex nonlinear patterns and highlighted key architectural choices. I
-            applied these principles to Fashion-MNIST, using a multilayer perceptron, to address to a realistic
-            multiclass clothing classification problem baased on the image dataset.
-            Differences between training, validation, and test accuracy revealed overfitting and showed why training
-            accuracy alone is inadequate for
-            model evaluation.</p>
+          <p> Artificial Neural Networks (ANNs) are inspired by how the brain’s neurons receive and process signals,
+            process information and transmit output. ANNs mimic this concept through input and weighted connections to
+            learn to make predictions.
+            I explored fundamental concepts from perceptrons to multilayer networks, including activation functions,
+            error calculation, weight updates, and backpropagation. Activation functions are crucial for introducing
+            nonlinearity, allowing multilayer networks with hidden layers to learn complex nonlinear patterns beyond
+            what a linear perceptron can capture. I applied these principles to Fashion-MNIST with a multilayer
+            perceptron. Differences between training, validation, and test accuracy revealed overfitting and showed why
+            training accuracy alone is inadequate for model evaluation.</p>
           <div class="card-footer">
-            <a class="md-btn btn-notebook" href="../assets/notebooks/Unit07_ANN_Foundations.ipynb" target="_blank">
+            <a class="md-btn btn-notebook" href="../assets/notebooks/ANN_Foundations.ipynb" target="_blank">
               <span>ANN Foundations</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
@@ -221,6 +221,61 @@
             </a>
           </div>
         </article>
+
+        <article class="card">
+          <h3> Training an Artificial Neural Network (ANN)</h3>
+          <p> ANNs learn by minimising prediction errors, which are measured by a loss function
+            that quantifies the difference between predicted and actual values.
+            Backpropagation computes gradients that indicate how changes in each weight and bias impact the loss.
+            Gradient descent then uses these gradients to update the parameters, with the learning rate determining the
+            size of each adjustment.
+            Through guided PyTorch exercises with the California Housing dataset, I practised building, training, and
+            evaluating simple regression neural networks. I explored how the learning rate and iteration count affect
+            convergence, aiming to reduce loss efficiently while preserving performance on unseen data. Experimenting
+            with learning rates revealed that larger updates do not always enhance learning. Mini-batch training
+            demonstrated that one epoch can involve multiple weight updates. These exercises reinforced the importance
+            of evaluating performance on unseen data rather than relying solely on training loss.</p>
+          <div class="card-footer">
+            <a class="md-btn btn-notebook" href="../assets/notebooks/california_housing_neural_networks.ipynb"
+              target="_blank">
+              <span>ANN California Housing</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/ann_loss_and_training_performance.ipynb"
+              target="_blank">
+              <span>ANN Loss and Training Performance</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3> Convolutional Neural Networks (CNNs) & Image Recognition</h3>
+          <p> Convolutional Neural Networks (CNNs) are a class of deep learning algorithms that process images by
+            applying filters (kernels) to extract and learn patterns from visual data.
+            I explored image preparation, convolutional-layer filters, feature maps, activation functions, and pooling
+            through guided PyTorch examples. Applying max-pooling demonstrated how reducing spatial dimensions can
+            remove image details. During the CIFAR-10 exercise, I observed that an incorrectly labelled image could have
+            a higher confidence score than a correctly labelled one. This highlights that confidence alone does not
+            guarantee correctness. In facial recognition, such misidentifications can have serious consequences for
+            individuals, emphasising the need for robust human-in-the-loop oversight. Effective supervision requires a
+            deep understanding of a model's inner workings, development decisions, limitations, evaluation methods.
+            These factors are especially crucial in high-stakes contexts, where model errors can significantly impact
+            outcomes and decision-making.</p>
+          <div class="card-footer">
+            <a class="md-btn btn-notebook" href="../assets/notebooks/CIFAR_10_CNN_object_recognition_ethics.ipynb"
+              target="_blank">
+              <span>CIFAR-10 CNN Object Recognition</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/image_preparation_convolutional_layers.ipynb"
+              target="_blank">
+              <span>Image Processing with CNNs</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
 
         <!--
         <article class="card">
