@@ -72,6 +72,43 @@
         </article>
 
         <article class="card">
+          <h3>Sephora Recommender System</h3>
+          <p>As product catalogues expand, customers face more choices, making it increasingly difficult to find
+            relevant products. Can personalised recommendations help them discover items they are more likely to enjoy?
+            This project explores whether customer ratings can support personalised Sephora product recommendations. A
+            recommender system helps customers discover products they may like by learning from their past customer
+            ratings to predict preferences and create personalised product rankings.
+            This project compares classical and deep learning models—classical matrix factorisation, neural
+            collaborative filtering, and feature-aware collaborative recommendation, to test whether added complexity
+            improves product discovery. Model performance is evaluated in two ways: RMSE measures prediction accuracy,
+            while NDCG@10 measures how well models rank relevant products near the top 10 results. SHAP is used to
+            explain contributions to predicted ratings, alongside subgroup performance analysis and consideration of
+            responsible deployment.</p>
+          <div class="card-footer">
+            <a class="md-btn" href="../assets/pdf/Sephora_Recommender_System_Presentation.pdf">
+              <span>Key Project - Recommender Presentation</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/sephora_recommender_assignment_1_final.ipynb"
+              target="_blank">
+              <span>Key Project - Recommender Notebook</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Reflection - ML </h3>
+          <p>coming</p>
+          <div class="card-footer">
+            <a class="md-btn" href="../assets/pdf/Machine Learing-Driven AirBNB Marketplace Optimisation.pdf">
+              <span>Key Project - Reflection</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
           <h3>From Industry 4.0 to 5.0: Toward a resilient, human-centric paradigm</h3>
           <p>The MGM ransomware attack highlights that while Industry 4.0 champions efficiency gains through automation
             and interconnectivity, these advances alone are insufficient. From a data integrity perspective, companies
@@ -88,6 +125,18 @@
             </a>
           </div>
         </article>
+
+        <article class="card">
+          <h3>Discussion 2</h3>
+          <p>coming.</p>
+          <div class="card-footer">
+            <a class="md-btn" href="../assets/pdf/From Industry 4.0 to 5.0_MGM_Discussion.pdf">
+              <span>Reflection</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
 
         <article class="card">
           <h3>Exploratory Data Analysis (EDA) </h3>
@@ -142,7 +191,7 @@
             predicted values for a continuous target. However, model evaluation and residual analysis demonstrate that
             performance metrics alone do not provide a complete picture. Examining residuals helps determine whether
             prediction errors are randomly distributed or if the model has missed underlying patterns.
-            Applying this to both Population–GDP and vehicle data helped connect the statistical
+            Applying this to both Population-GDP and vehicle data helped connect the statistical
             concepts with practical model fitting, prediction and evaluation.</p>
           <div class="card-footer">
             <a class="md-btn btn-notebook" href="../assets/notebooks/population_gdp.ipynb" target="_blank">
@@ -200,7 +249,7 @@
         </article>
 
         <article class="card">
-          <h3> Artificial Neural Networks: From Simple to Multilayer Perceptor</h3>
+          <h3> Artificial Neural Networks: From Simple to Multilayer Perceptron</h3>
           <p> Artificial Neural Networks (ANNs) are inspired by how the brain’s neurons receive and process signals,
             process information and transmit output. ANNs mimic this concept through input and weighted connections to
             learn to make predictions.
@@ -276,6 +325,67 @@
           </div>
         </article>
 
+        <article class="card">
+          <h3> Exploring Natural Language Processing (NLP)</h3>
+          <p> Natural Language Processing (NLP) enables analysis and generation of human-like language. Early systems
+            relied on rule-based approaches, statistical methods learned patterns from text input, and deep learning
+            advanced the field by using neural networks to capture more complex language representations.
+            Recurrent neural networks (RNNs) process sequences step by step, while modern Transformers link information
+            across tokens using attention mechanisms. Supervised learning uses pre-labelled examples, while
+            self-supervised approaches learn from unlabeled data. BERT predicts masked tokens; GPT predicts the next
+            token.
+            Pretraining lets models learn broad language representations, but it also risks learning biases and
+            inaccuracies from the training data.
+            Through practical experiments with BERT, GPT-2 and FLAN-T5, I explored masked-token prediction, text
+            generation and summarisation. I learned that context and generation settings influence model outputs, but
+            confidence and fluency do not guarantee correctness. Sentiment analysis further indicated that human review
+            remains essential.</p>
+          <div class="card-footer">
+            <a class="md-btn btn-notebook" href="../assets/notebooks/exploring_pretrained_transformers.ipynb"
+              target="_blank">
+              <span>NLP with Pretrained Transformers</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3> Model Selection and Performance Evaluation</h3>
+          <p> Choosing a model requires matching the model to the task, class distribution, and weighing error costs. My
+            classification exercises showed that accuracy alone can hide weaknesses, and metrics like precision, recall
+            (sensitivity), specificity, and F1, along with a confusion matrix, can reveal error types. For regression
+            tasks, MAE and MSE measure prediction errors, while R² compares performance with a mean-prediction baseline.
+            Moreover, understanding bias and variance helped me connect model evaluation to improvement decisions.
+            Training a model on data does not guarantee generalisability, and evaluating it on a validation set helps
+            assess performance and guide choices. High training and validation errors can suggest underfitting, while a
+            substantially lower training error than validation error can indicate overfitting. These patterns guide
+            changes to model complexity, regularisation, training duration, or data. Separate test data should remain
+            untouched for final evaluation.</p>
+          <div class="card-footer">
+            <a class="md-btn btn-notebook" href="../assets/notebooks/sentiment_analysis_model_evaluation.ipynb"
+              target="_blank">
+              <span>Sentiment Analysis & Evaluation</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/Unit11_model_Performance_Measurement.ipynb"
+              target="_blank">
+              <span>Model Performance Evaluation</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Industry 4.0 and Machine Learning</h3>
+          <p> coming.</p>
+          <div class="card-footer">
+            <a class="md-btn btn-notebook" href="..."
+              target="_blank">
+              <span>coming</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
 
         <!--
         <article class="card">
