@@ -26,7 +26,9 @@
     "key project": "btn-key-project",
     "reflection": "btn-reflection",
     "case study": "btn-case-study",
-    "short analysis": "btn-short-analysis"
+    "short analysis": "btn-short-analysis",
+    "view discussion": "btn-external",
+    "discussion summary": "btn-discussion-summary"
   };
 
   var mdBtns = document.querySelectorAll(".md-btn");

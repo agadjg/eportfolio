@@ -16,6 +16,17 @@
   .section-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  /* vertical-split card: 2 x 2 sections */
+  .card-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--md-sys-spacing-5);
+  }
+
+  .card-columns .card-section:nth-child(odd) {
+    padding-left: 0;
+    border-left: 0;
+  }
 }
 
 @media (max-width: 620px) {
@@ -35,5 +46,31 @@
 
   .card {
     min-height: 220px;
+  }
+
+  .card--full {
+    min-height: auto;
+    padding: var(--md-sys-spacing-5);
+  }
+
+  .card--full h3 {
+    font-size: 1.3rem;
+  }
+
+  /* vertical-split card: stack sections with horizontal dividers */
+  .card-columns {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .card-columns .card-section {
+    padding: var(--md-sys-spacing-4) 0 0;
+    margin-top: var(--md-sys-spacing-4);
+    border-left: 0;
+    border-top: 1px solid var(--md-sys-color-outline-variant);
+  }
+
+  .card-columns .card-section:first-child {
+    margin-top: 0;
   }
 }
