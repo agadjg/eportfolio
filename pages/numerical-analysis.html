@@ -39,11 +39,88 @@
             Numerical Analysis
           </span>
         </h1>
-        <p>Numerical Analysis for Data Science and AI builds the mathematical and statistical foundations essential for
-          AI literacy. These foundations empower critical evaluation of quantitative methodology applied in data science
-          and ML contexts, translating abstract mathematics into practical analytical thinking. Statistical techniques
-          and data analysis are implemented in R and Python, adding a hands-on programming dimension to the learning
-          experience.</p>
+        <p>As Schober, Bossers, and Schwarte (2018) emphasise, combining descriptive and
+          inferential statistics is essential for drawing meaningful conclusions. Ranganathan
+          (2021) highlights that understanding the research question first is paramount. Next,
+          she recommends analysing the data's characteristics and verifying statistical
+          requirements—using formal tests and visual inspection—both of which are critical for
+          valid inference. I learned that formulating a hypothesis depends on aligning with the
+          data's underlying assumptions and understanding the type of data, the number of
+          groups to be compared, and the relationships among them. This process guides the
+          choice between parametric tests for comparing group means and non-parametric
+          tests assessing the rank sums or rank differences.</p>
+
+        <p>However, these decisions are rarely linear. Different paths may be valid provided that
+          assumptions are evaluated, test limitations are acknowledged, and the chosen
+          method is well justified. For example, failing a normality test does not automatically
+          rule out the use of a parametric test. In my blood pressure analysis, both the
+          Mann-Whitney U test and the Welch t-test yielded the same statistical conclusion. As
+          Fagerland (2012) notes, selecting the appropriate test is not a single-criterion
+          decision. It requires visual inspection, assessment of outliers, and consideration of
+          sample size and the test's robustness. Cross-validation strengthens confidence in
+          these decisions.</p>
+
+        <p>Furthermore, these findings—supported by McShane et al. (2024)—confirm that
+          statistical significance is not a simple, binary decision. Greenland et al. (2016) and
+          Tijssen (2021) argue that the p-value alone does not convey meaningful information.
+          While it provides evidence against the null hypothesis, it does not address the
+          magnitude, precision, or practical significance of an observed effect, which are
+          captured by the confidence interval.
+
+        <p>My R activities confirmed the existence of this gap. In my multilinear regression
+          model, one variable had a borderline p-value near the 0.05 significance level. The
+          wide confidence interval showed the effect was real, but the effect size was
+          imprecise. Conversely, a demographic predictor was significant in a logistic model but
+          became insignificant after adding another variable. The odds ratio and a narrow
+          confidence interval indicated that the effect was precise but negligible. These
+          examples demonstrate why considering the full picture reveals insights, strengthens
+          conclusions and avoids misinterpretations.</p>
+
+        <p>Additionally, summary and contingency tables form the foundation of analysis. While
+          extracting summary output in R is straightforward, presenting it meaningfully requires
+          careful consideration. Choosing between means/standard deviations and
+          medians/interquartile ranges for continuous variables, and between counts,
+          percentages, or both for categorical variables, should always align with the purpose
+          of analysis.</p>
+
+        <p>Contingency tables, meanwhile, prompt important questions about how categorical
+          variables are allocated. I came to understand that their analytical value and
+          interpretation depend on their organisation and layout, which should be guided by the
+          research question rather than by R's default output.</p>
+
+        <p>Finally, I realised that creating graphical visualisations is more than just producing
+          graphs. My experience and peer feedback—such as from Brown's forum discussion
+          —taught me that careful data preparation, thoughtful selection, and simplicity are key.
+          The abundance of graphic choices challenged my restraint, and I learned the
+          importance of aligning visuals to the audience's graphic literacy.
+          My perspective shifted from viewing graphs as mere outputs to appreciating them as
+          intelligent analytical reasoning tools. As emphasised by Balan (2024), when used
+          effectively, visualisation promotes understanding, powerfully conveys a clear
+          message, builds trust with the reader, and aids decision-making.</p>
+
+        <p><b>References</b></p>
+        <p>Balan, S. (2024) 'A systematic review of data visualization', Journal of Strategic
+        Innovation and Sustainability, 19(3), pp. 116-131. Available at:
+        https://doi.org/10.33423/jsis.v19i3.7375</p>
+        <p>Greenland, S., et al. (2016) 'Statistical tests, P values, confidence intervals, and
+          power: A guide to misinterpretations', European Journal of Epidemiology, 31(4), pp.
+          337-350. DOI: https://doi.org/10.1007/s10654-016-0149-3</p>
+        <p>Hazra, A. (2017) 'Using the confidence interval confidently', Journal of Thoracic
+          Disease, 9(10), pp. 4125–4130. DOI: https://doi.org/10.21037/jtd.2017.09.14</p>
+        <p>McShane, B.B., et al. (2024) '"Statistical Significance" and Statistical Reporting:
+        Moving Beyond Binary', Journal of Marketing, 88(3), pp. 1–19. DOI:
+        https://doi.org/10.1177/00222429231216910</p>
+        <p>Office for National Statistics (n.d.) Uncertainty and how we measure it for our
+        surveys. Available at:
+        https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/uncer
+        taintyandhowwemeasureit#confidence-interval (Accessed: 28 June 2026).</p>
+        <p>Schober, P.S., Bossers, S.M. and Schwarte, L.A. (2018) 'Statistical significance
+        versus clinical importance of observed effect sizes: what do P values and confidence
+        intervals really represent?', Anesthesia & Analgesia, 126(3), pp. 1068–1072. DOI:
+        https://doi.org/10.1213/ANE.0000000000002798</p>
+        <p>Tijssen, J.G.P. (2021) 'More confidence intervals and fewer p values: A positive
+          trend?', Journal of the American College of Cardiology, 77(12), pp. 1562–1563. DOI:
+          https://doi.org/10.1016/j.jacc.2021.02.004</p>
       </section>
 
       <section class="section-grid" aria-label="Portfolio section cards">
@@ -53,9 +130,11 @@
           <p>According International Diabetes Federation (2026) Diabetes is a growing global health challenge, with 589
             million adults affected in 2024 and numbers expected to reach 853 million by 2050. Type 2 diabetes, which
             makes up 90% of cases, is driven by factors such as urbanisation, ageing, obesity, and poor lifestyle
-            habits. Early identification of at-risk individuals is key for prevention and care. (presentation recording and transcript submitted)</p>
+            habits. Early identification of at-risk individuals is key for prevention and care. (presentation recording
+            and transcript submitted)</p>
           <div class="card-footer">
-            <a class="md-btn" href="../assets/pdf/Final_Assignment_Numerical_Analysis_Diabetes_Presentation.pdf" target="_blank">
+            <a class="md-btn" href="../assets/pdf/Final_Assignment_Numerical_Analysis_Diabetes_Presentation.pdf"
+              target="_blank">
               <span>Key Project</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>

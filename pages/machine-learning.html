@@ -36,80 +36,89 @@
         <h1 class="section-title">
           <span class="material-symbols-outlined module-icon" aria-hidden="true">model_training</span>
           Machine Learning
-          <span class="module-status module-status--inprogress">In Progress</span>
         </h1>
         <p> This module began by surveying the broader landscape of machine learning and its influence on Industry 4.0
           and 5.0. It then built a foundation in exploratory data analysis and statistical methods, such as correlation
           and regression, before moving on to clustering, neural networks, and natural language processing. Each topic
           combined practical application with an exploration of its underlying principles. The module concluded with
-          model evaluation, deployment and the wider challenges shaping contemporary machine learning systems.
-          As I progressed through the module, I became more confident in understanding how machine learning works and
-          more critical when interpreting its outputs, limitations and implications. This ePortfolio documents this
-          journey, the questions, experiments and challenges that shaped my learning and developed my practical skills
-          and judgement.</p>
+          model evaluation, deployment and the wider challenges shaping contemporary machine learning systems.</p>
+
+        <p>As McKinney (2022) highlighted and tutor feedback confirmed, data understanding
+          and preparation—which take up 80% of project time—are crucial for analysis
+          success. Working with datasets from housing, fuel consumption, and
+          population-GDP to auto-mpg, I recognised how important this step is. I no longer
+          view it as a fixed sequence of statistical tests and visualisation production. I treat it
+          now as an iterative investigation of variable relationships and feature selection that
+          informs preprocessing and modelling decisions. I learned that model complexity
+          should adapt to data characteristics, but comparing regression models showed me
+          that greater flexibility does not always improve generalisation (Géron, 2025; Tian and
+          Zhang, 2022).</p>
+
+        <p>Clustering techniques revealed to me that the definition of similarity matters, and
+          different measures (Euclidean, Jaccard, cosine) suit different data structures and
+          analytical objectives. The wine-clustering exercise reinforced that groups emerge
+          from feature preparation, scaling, and distance, and that cluster profiles, alongside
+          statistical distinctiveness, should support their business relevance. However, the
+          Airbnb project emphasised that identifying market-interpretable segments does not
+          necessarily establish their predictive business value, raising a question between
+          descriptive insights and predictive usefulness.</p>
+
+        <p>Working with neural networks and moving beyond code helped me understand what
+          each training step does. It deepened my understanding of how models learn through
+          iterative parameter updates. Initially, I was confused by manual training, high-level
+          APIs, and mini-batch gradient descent. At first, I saw them as separate processes,
+          but later realised they are all variations of the same learning cycle. Experimenting
+          with learning rates taught me that a larger learning rate does not necessarily speed
+          convergence or improve performance, and that a smaller one can slow progress.
+
+        <p>My Fashion-MNIST activity demonstrated that learning only on training data is
+          insufficient. Validation performance helps detect overfitting and guide model-setting
+          choices, while the test set allows independent final assessment (Géron, 2025). This
+          data separation is critical, as are the choice and interpretation of metrics. Choosing
+          appropriate evaluation metrics requires considering the task at hand and the
+          consequences of incorrect predictions (Novaković et al., 2017). My sentiment
+          analysis showed how accuracy can conceal errors, and the CIFAR-10 image
+          recognition activity reinforced that confidence scores and correctness differ. While
+          these are just innocent examples, the real-world consequences can be severe,
+          ranging from mispredicting cancer to misidentifying individuals. Therefore, evaluating
+          model results requires balancing mathematical sophistication with careful human
+          judgment, awareness of broader implications, and a sensitivity to human values.</p>
+
+        <p>Finally, I built on lessons from the Airbnb project—which explored listing profiles and
+          their relationship with price—to my Sephora project on personalised skin product
+          recommendations. Leveraging tutors' feedback from the team assignment, I
+          connected model selection, validation, and subgroup performance to product
+          discovery, retention, and explainability, and considered data bias, privacy, and
+          algorithmic fairness. Reflecting on this experience, I recognise now that the quality of
+          an ML project goes beyond producing a technically sound output. Translating them into coherent
+          conclusions and actionable business insights is essential to producing a meaningful
+          project outcome.</p>
+
+        <p>As I progressed through the module, I became more confident in understanding how machine learning works and
+          more critical when interpreting its outputs, limitations and implications. As Nobel laureate Richard Feynman
+          said, “What I cannot create, I do not understand” (Feynman, quoted in Foster, 2023, p. xvii) I began the
+          module with this gap, and while it remains, it has narrowed.</p>
+
+        <p>This ePortfolio documents this journey, the questions, experiments and challenges that shaped my learning and
+          developed my practical skills and judgement.</p>
+
+        <p><b>References</b></p>
+        <p>Foster, D. (2023) Generative Deep Learning: Teaching Machines to Paint, Write,
+          Compose, and Play. 2nd edn. O’Reilly Media</p>
+        <p>Géron, A. (2022) Hands-On Machine Learning with Scikit-Learn, Keras, and
+          TensorFlow. 3rd edn. O’Reilly Media</p>
+        <p>McKinney, W. (2022) Python for Data Analysis: Data Wrangling with pandas, NumPy,
+          and Jupyter. 3rd edn. O’Reilly Media</p>
+        <p>Novaković, J. Dj., et al. (2017) ‘Evaluation of classification models in machine
+          learning’, Theory and Applications of Mathematics & Computer Science, 7(1), pp.
+          39–46. Available at: https://www.uav.ro/jour/index.php/tamcs/article/view/2234
+          (Accessed: 11 October 2026).</p>
+        <p>Tian, Y. and Zhang, Y. (2022) ‘A comprehensive survey on regularization strategies in
+          machine learning’, Information Fusion, 80, pp. 146–166.
+          https://doi.org/10.1016/j.inffus.2021.11.005</p>
       </section>
 
       <section class="section-grid" aria-label="Portfolio section cards">
-
-        <article class="card">
-          <h3>Machine Learning-Driven Airbnb Marketplace Optimisation</h3>
-          <p>The Airbnb Analysis collaborative project aimed to identify distinct Airbnb listing profiles and evaluate
-            their influence on price prediction, ultimately supporting business insights and actionable recommendations.
-            The analysis integrated exploratory data analysis, feature preparation and engineering, clustering,
-            regression modelling, and evaluation. Insights derived from these steps were intended to inform pricing
-            strategies, targeted host recommendations, and marketplace positioning.
-            The analysis of the NYC dataset, while acknowledging its limitations, demonstrated that clustering can
-            reveal meaningful Airbnb listing profiles, but these groupings did not enhance price prediction accuracy.
-            This suggests that identifying market-interpretable segments does not necessarily mean those groups should
-            guide the predictive modelling strategy. Instead, listing-level signals may be more meaningful for a
-            listing-specific, rather than segment-based, pricing approach.
-          </p>
-          <div class="card-footer">
-            <a class="md-btn" href="../assets/pdf/Machine Learing-Driven AirBNB Marketplace Optimisation.pdf">
-              <span>Key Project - Team Project</span>
-              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Sephora Recommender System</h3>
-          <p>As product catalogues expand, customers face more choices, making it increasingly difficult to find
-            relevant products. Can personalised recommendations help them discover items they are more likely to enjoy?
-            This project explores whether customer ratings can support personalised Sephora product recommendations. A
-            recommender system helps customers discover products they may like by learning from their past customer
-            ratings to predict preferences and create personalised product rankings.
-            This project compares classical and deep learning models—classical matrix factorisation, neural
-            collaborative filtering, and feature-aware collaborative recommendation, to test whether added complexity
-            improves product discovery. Model performance is evaluated in two ways: RMSE measures prediction accuracy,
-            while NDCG@10 measures how well models rank relevant products near the top 10 results. SHAP is used to
-            explain contributions to predicted ratings, alongside subgroup performance analysis and consideration of
-            responsible deployment.</p>
-          <div class="card-footer">
-            <a class="md-btn" href="../assets/pdf/Sephora_Recommender_System_Presentation.pdf">
-              <span>Key Project - Recommender Presentation</span>
-              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
-            </a>
-            <a class="md-btn btn-notebook" href="../assets/notebooks/sephora_recommender_assignment_1_final.ipynb"
-              target="_blank">
-              <span>Key Project - Recommender Notebook</span>
-              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
-            </a>
-          </div>
-        </article>
-
-        <!--
-        <article class="card">
-          <h3>Reflection - ML </h3>
-          <p>coming</p>
-          <div class="card-footer">
-            <a class="md-btn" href="../assets/pdf/Machine Learing-Driven AirBNB Marketplace Optimisation.pdf">
-              <span>Key Project - Reflection</span>
-              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
-            </a>
-          </div>
-        </article>
-        -->
 
         <article class="card">
           <h3>From Industry 4.0 to 5.0: Toward a resilient, human-centric paradigm</h3>
@@ -121,29 +130,14 @@
             integrity, and operational reliability, with essential human oversight, sound judgment, and ongoing
             feedback. Adopting these practices supports informed decision-making, safeguards enterprises and
             individuals, and builds public trust in the underlying system.</p>
+
           <div class="card-footer">
             <a class="md-btn" href="../assets/pdf/From Industry 4.0 to 5.0_MGM_Discussion.pdf">
               <span>Reflection</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>AI Writers: From Confident-Sounding Fluency to Reliability</h3>
-          <p>Today, LLMs support a wide range of administrative and creative work, delivering significant gains in
-            efficiency and productivity. From summarising meetings to synthesising documents, writing books, and
-            developing creative marketing campaigns, they produce engaging, innovative output. However, while these
-            models can generate fluent content, they do not truly understand it. Because they rely on mathematical
-            formulas rather than genuine comprehension of language or context, their performance can be unpredictable
-            and error-prone. Mistakes become harder to spot as technology advances rapidly. Ultimately, humans must act
-            as gatekeepers to safeguard and govern AI systems. This requires not only selecting appropriate metrics,
-            assessing models in context, and fact-checking their output. It also means evaluating the emotional and
-            societal impacts of LLMs and providing informed guidance on deployment decisions. Architectural advances
-            alone do not guarantee reliability.</p>
-          <div class="card-footer">
-            <a class="md-btn" href="../assets/pdf/AI_Writers_From_Confident_Sounding_Fluency_to Reliability.pdf">
-              <span>Reflection</span>
+            <a class="md-btn" href="https://www.my-course.co.uk/mod/forum/discuss.php?d=379693">
+              <span>View Discussion</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
           </div>
@@ -169,6 +163,7 @@
             </a>
           </div>
         </article>
+
 
         <article class="card">
           <h3> From Correlation to Regression Models</h3>
@@ -259,6 +254,28 @@
           </div>
         </article>
 
+
+        <article class="card">
+          <h3>Machine Learning-Driven Airbnb Marketplace Optimisation</h3>
+          <p>The Airbnb Analysis collaborative project aimed to identify distinct Airbnb listing profiles and evaluate
+            their influence on price prediction, ultimately supporting business insights and actionable recommendations.
+            The analysis integrated exploratory data analysis, feature preparation and engineering, clustering,
+            regression modelling, and evaluation. Insights derived from these steps were intended to inform pricing
+            strategies, targeted host recommendations, and marketplace positioning.
+            The analysis of the NYC dataset, while acknowledging its limitations, demonstrated that clustering can
+            reveal meaningful Airbnb listing profiles, but these groupings did not enhance price prediction accuracy.
+            This suggests that identifying market-interpretable segments does not necessarily mean those groups should
+            guide the predictive modelling strategy. Instead, listing-level signals may be more meaningful for a
+            listing-specific, rather than segment-based, pricing approach.
+          </p>
+          <div class="card-footer">
+            <a class="md-btn" href="../assets/pdf/Machine Learing-Driven AirBNB Marketplace Optimisation.pdf">
+              <span>Key Project - Team Project</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
         <article class="card">
           <h3> Artificial Neural Networks: From Simple to Multilayer Perceptron</h3>
           <p> Artificial Neural Networks (ANNs) are inspired by how the brain’s neurons receive and process signals,
@@ -343,7 +360,8 @@
             advanced the field by using neural networks to capture more complex language representations.
             Recurrent neural networks (RNNs) process sequences step by step, while modern Transformers link information
             across tokens using attention mechanisms. Supervised learning uses pre-labelled examples, while
-            self-supervised approaches learn from unlabeled data. BERT predicts masked tokens, while GPT predicts the next
+            self-supervised approaches learn from unlabeled data. BERT predicts masked tokens, while GPT predicts the
+            next
             token.
             Pretraining lets models learn broad language representations, but it also risks learning biases and
             inaccuracies from the training data.
@@ -381,6 +399,56 @@
             <a class="md-btn btn-notebook" href="../assets/notebooks/Unit11_model_Performance_Measurement.ipynb"
               target="_blank">
               <span>Model Performance Evaluation</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>AI Writers: From Confident-Sounding Fluency to Reliability</h3>
+          <p>Today, LLMs support a wide range of administrative and creative work, delivering significant gains in
+            efficiency and productivity. From summarising meetings to synthesising documents, writing books, and
+            developing creative marketing campaigns, they produce engaging, innovative output. However, while these
+            models can generate fluent content, they do not truly understand it. Because they rely on mathematical
+            formulas rather than genuine comprehension of language or context, their performance can be unpredictable
+            and error-prone. Mistakes become harder to spot as technology advances rapidly. Ultimately, humans must act
+            as gatekeepers to safeguard and govern AI systems. This requires not only selecting appropriate metrics,
+            assessing models in context, and fact-checking their output. It also means evaluating the emotional and
+            societal impacts of LLMs and providing informed guidance on deployment decisions. Architectural advances
+            alone do not guarantee reliability.</p>
+          <div class="card-footer">
+            <a class="md-btn" href="../assets/pdf/AI_Writers_From_Confident_Sounding_Fluency_to Reliability.pdf">
+              <span>Reflection</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+            <a class="md-btn" href="https://www.my-course.co.uk/mod/forum/discuss.php?d=391523">
+              <span>View Discussion</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Sephora Recommender System</h3>
+          <p>As product catalogues expand, customers face more choices, making it increasingly difficult to find
+            relevant products. Can personalised recommendations help them discover items they are more likely to enjoy?
+            This project explores whether customer ratings can support personalised Sephora product recommendations. A
+            recommender system helps customers discover products they may like by learning from their past customer
+            ratings to predict preferences and create personalised product rankings.
+            This project compares classical and deep learning models—classical matrix factorisation, neural
+            collaborative filtering, and feature-aware collaborative recommendation, to test whether added complexity
+            improves product discovery. Model performance is evaluated in two ways: RMSE measures prediction accuracy,
+            while NDCG@10 measures how well models rank relevant products near the top 10 results. SHAP is used to
+            explain contributions to predicted ratings, alongside subgroup performance analysis and consideration of
+            responsible deployment.</p>
+          <div class="card-footer">
+            <a class="md-btn" href="../assets/pdf/Sephora_Recommender_System_Presentation.pdf">
+              <span>Key Project - Recommender Presentation</span>
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+            </a>
+            <a class="md-btn btn-notebook" href="../assets/notebooks/sephora_recommender_assignment_1_final.ipynb"
+              target="_blank">
+              <span>Key Project - Recommender Notebook</span>
               <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
             </a>
           </div>
